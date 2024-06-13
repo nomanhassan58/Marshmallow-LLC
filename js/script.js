@@ -98,3 +98,12 @@ var swiper = new Swiper(".logo-slider", {
       },
    },
 });
+function sendMail(){
+   let parms={
+      name : document.getElementById('name').value,
+      email : document.getElementById('email').value,
+      subject : document.getElementById('subject').value,
+      message : document.getElementById('message').value
+   }
+   emailjs.send('service_mdrvcxj','template_z623f1a', parms).then(alert('Message sent successfully !'))
+}

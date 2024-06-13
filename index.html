@@ -20,6 +20,18 @@
 
   <!-- custom css file link  -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Email JS integration -->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+  publicKey: "fwwQW_jmqoIUzVSAA",
+});
+})();
+</script>
 </head>
 
 <body>
@@ -451,15 +463,17 @@
 
       <form action="">
         <h3>get in touch</h3>
-        <input type="text" placeholder="name" class="box" />
-        <input type="email" placeholder="email" class="box" />
-        <input type="number" placeholder="phone" class="box" />
-        <textarea name="" placeholder="message" class="box" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="send message" class="btn" />
+        <input type="text" placeholder="name" class="box" id="name" />
+        <input type="email" placeholder="email" class="box" id="email" />
+        <input type="text" placeholder="subject" class="box" id="subject" />
+        <textarea name="" placeholder="message" class="box" id="message" cols="30" rows="10"></textarea>
+        <input type="submit" onclick="sendMail()" value="send message" class="btn" />
       </form>
     </div>
   </section>
+  
 
+  
   <!-- contact section ends -->
 
 
